@@ -15,15 +15,17 @@ module.exports = {
         xl: '1440px',
       },
       colors: {
-        'blue': '#1fb6ff',
-        'purple': '#7e5bef',
-        'pink': '#ff49db',
-        'orange': '#ff7849',
-        'green': '#13ce66',
-        'yellow': '#ffc82c',
-        'gray-dark': '#273444',
-        'gray': '#8492a6',
-        'gray-light': '#d3dce6',
+        'stone-700': '#44403c',
+        'slate-400': '#94a3b8',
+        'sky-200': '#bae6fd',
+        'zinc-700': '#3f3f46',
+        'sky-950': '#082f49',
+        'gray-dark-1':'#343d46',
+        'gray-dark-2':'#4f5b66',
+        'gray-dark-3':'#65737e',
+        'gray-dark-4':'#a7adba',
+        'gray-dark-5':'#c0c5ce'
+
       },
       fontFamily: {
         amsterdam: ['New Amsterdam', 'sans - serif'],
@@ -31,6 +33,8 @@ module.exports = {
         serif: ['Merriweather', 'serif'],
       },
     },
-    plugins: [],
+    plugins: [
+      require('@tailwindcss/typography'),
+    ],
   }
 };
