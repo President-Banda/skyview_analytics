@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
     html {
-        font-family: 'Dosis','New Amsterdam';
+        font-family: "Wix Madefor Text", 'sans-serif';
     }
 }

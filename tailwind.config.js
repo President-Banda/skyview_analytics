@@ -28,9 +28,8 @@ module.exports = {
 
       },
       fontFamily: {
-        amsterdam: ['New Amsterdam', 'sans - serif'],
-        sans: ['Graphik', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
+        wixDisplay: ['Wix Madefor Display', 'sans - serif'],
+        wixText:['Wix Madefor Display'],
       },
     },
     plugins: [

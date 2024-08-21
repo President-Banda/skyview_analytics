@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <div className="font-[Roboto] font-bold">
+    <div className="font-[Wix-Madefor-Display] font-bold">
       <Navbar />
       <Header />
       <Testimonial />
