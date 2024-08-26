@@ -2,7 +2,7 @@ import React from 'react'
 
 const Services = () => {
 return(
-   <div class="flex mx-auto justify-center items-center">
+   <div class="flex mx-auto justify-center items-center" id='services'>
     <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 m-8">
         <div class="flex flex-col  w-full xl:w-96 bg-[#c0c5ce] text-[#343d46] shadow-xl">
             <figure class="flex justify-center items-center">
