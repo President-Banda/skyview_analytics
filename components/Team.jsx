@@ -1,4 +1,5 @@
 import React from 'react'
+import Albert_Image from './Images/Albert'
 
 const Team = () => {
   return (
@@ -9,7 +10,9 @@ const Team = () => {
 
   <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
     <div class="text-center">
-      <img class="rounded-xl sm:size-48 lg:size-60 mx-auto" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar"></img>
+      <div class="rounded-xl sm:size-48 lg:size-60 mx-auto bg-[#c0c5ce] bg-opacity-15">
+        <Albert_Image />
+      </div>
       <div class="mt-2 sm:mt-4">
         <h3 class="text-sm font-medium text-gray-800 sm:text-base lg:text-lg">
           Albert Banda
