@@ -8,7 +8,7 @@ return(
    <div class="flex mx-auto justify-center items-center" >
     
 
-    <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 m-8 mt-10">
+    <div class="sm:grid sm:grid-cols-1 lg:grid-cols-3 gap-6 m-8 mt-10">
 
     <div class="grid col-span-3 text-center mb-10 lg:mb-14" id='services'>
         <h2 class="text-2xl font-bold md:text-4xl md:leading-tight">Our Services</h2>

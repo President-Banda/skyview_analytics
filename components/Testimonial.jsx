@@ -27,8 +27,8 @@ const Testimonial = () => {
 
           <footer class="mt-6">
             <div class="flex items-center">
-              <div class="lg:hidden shrink-0">
-                <img class="size-12 rounded-full" src="https://images.unsplash.com/photo-1671726203390-cdc4354ee2eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar"></img>
+              <div class="lg:hidden shrink-0 size-20">
+                <Chimwemwe_Image />
               </div>
               <div class="ms-4 lg:ms-0">
                 <p class="font-medium text-gray-800">
@@ -67,8 +67,8 @@ const Testimonial = () => {
 
           <footer class="mt-6">
             <div class="flex items-center">
-              <div class="lg:hidden shrink-0">
-                <img class="size-12 rounded-full" src="https://images.unsplash.com/photo-1671726203390-cdc4354ee2eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar"></img>
+              <div class="lg:hidden shrink-0 size-20">
+                <Dennis_Image />
               </div>
               <div class="ms-4 lg:ms-0">
                 <p class="font-medium text-gray-800">
