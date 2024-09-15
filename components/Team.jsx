@@ -1,5 +1,6 @@
 import React from 'react'
 import Albert_Image from './Images/Albert'
+import Richard_Image from './Images/Richard'
 
 const Team = () => {
   return (
@@ -8,32 +9,72 @@ const Team = () => {
     <h2 class="text-2xl font-bold md:text-4xl md:leading-tight">Our Team</h2>
   </div>
 
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
-    <div class="text-center">
-      <div class="rounded-xl sm:size-48 lg:size-60 mx-auto bg-[#c0c5ce] bg-opacity-15">
-        <Albert_Image />
-      </div>
-      <div class="mt-2 sm:mt-4">
-        <h3 class="text-sm font-medium text-gray-800 sm:text-base lg:text-lg">
-          Albert Banda
-        </h3>
-        <p class="text-xs text-gray-600 sm:text-sm lg:text-base">
-          Founder / CEO / Operations
-        </p>
-      </div>
-    </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        
+        <div class="text-center">
+          
+          <div class="rounded-xl sm:size-48 lg:size-60 mx-auto border border-black bg-[#c0c5ce] bg-opacity-15">
+            <Albert_Image />
+          </div>
 
-    <div class="text-center">
-      <img class="rounded-xl sm:size-48 lg:size-60 mx-auto" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar"></img>
-      <div class="mt-2 sm:mt-4">
-        <h3 class="text-sm font-medium text-gray-800 sm:text-base lg:text-lg">
-          Richard Malombe
-        </h3>
-        <p class="text-xs text-gray-600 sm:text-sm lg:text-base">
-          Digital Marketing / Brand Ambassador
-        </p>
-      </div>
-    </div>
+          <div class="mt-2 sm:mt-4">
+            <h3 class="text-sm font-medium text-gray-800 sm:text-base lg:text-lg">
+              Albert Banda
+            </h3>
+            <p class="text-xs text-gray-600 sm:text-sm lg:text-base">
+              Founder / CEO / Operations
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center">
+
+          <div class="rounded-xl sm:size-48 lg:size-60 mx-auto border border-black bg-[#c0c5ce] bg-opacity-15">
+            <Richard_Image />
+          </div>
+          
+        <div class="mt-2 sm:mt-4">
+          <h3 class="text-sm font-medium text-gray-800 sm:text-base lg:text-lg">
+            Richard Malombe
+          </h3>
+          <p class="text-xs text-gray-600 sm:text-sm lg:text-base">
+            Digital Marketing / Brand Ambassador
+          </p>
+        </div>
+        </div>
+
+        <div class="text-center">
+          
+          <div class="rounded-xl sm:size-48 lg:size-60 mx-auto border border-black bg-[#c0c5ce] bg-opacity-15">
+            <Albert_Image />
+          </div>
+
+          <div class="mt-2 sm:mt-4">
+            <h3 class="text-sm font-medium text-gray-800 sm:text-base lg:text-lg">
+              Bright Ngongonda
+            </h3>
+            <p class="text-xs text-gray-600 sm:text-sm lg:text-base">
+              Founder / CEO / Operations
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center">
+          
+          <div class="rounded-xl sm:size-48 lg:size-60 mx-auto border border-black bg-[#c0c5ce] bg-opacity-15">
+            <Albert_Image />
+          </div>
+
+          <div class="mt-2 sm:mt-4">
+            <h3 class="text-sm font-medium text-gray-800 sm:text-base lg:text-lg">
+              Chinsisi Mollen
+            </h3>
+            <p class="text-xs text-gray-600 sm:text-sm lg:text-base">
+              Founder / CEO / Operations
+            </p>
+          </div>
+        </div>
+        
     </div>
     </div>
 

@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 
-const Albert_Image = () => {
+const Richard_Image = () => {
   return (
     <div>
         <Image
-        src="/images/albert.png" 
+        src="/images/richard.png" 
         alt="logo"
         width={240}
         height={240}
@@ -17,4 +17,4 @@ const Albert_Image = () => {
   )
 }
 
-export default Albert_Image
+export default Richard_Image
