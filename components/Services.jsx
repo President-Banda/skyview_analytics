@@ -2,16 +2,22 @@ import React from 'react'
 import Shared_Hosting_Image from './Images/Shared'
 import Vps_Hosting_Image from './Images/Vps'
 import Ml_Hosting_Image from './Images/Ml'
+import { LayoutGrid } from './ui/layout-grid'
+import { LayoutGridDemo } from './LayOutGridDemo'
 
 const Services = () => {
 return(
    <div class="flex mx-auto justify-center items-center" >
     
 
-    <div class="sm:grid sm:grid-cols-1 lg:grid-cols-3 gap-6 m-8 mt-10">
+    <div class="sm:grid sm:grid-cols-1 sm:mb-2 lg:grid-cols-3 gap-6 m-8 mt-10">
 
     <div class="grid col-span-3 text-center mb-10 lg:mb-14" id='services'>
         <h2 class="text-2xl font-bold md:text-4xl md:leading-tight">Our Services</h2>
+    </div>
+    
+    <div class="grid col-span-3 text-center mb-10 lg:mb-14" id='services'>
+        <h4 class="text-lg font-bold md:text-4xl md:leading-tight">Hosting</h4>
     </div>
     
         <div class="flex flex-col  w-full xl:w-96 bg-[#c0c5ce] bg-opacity-10 shadow-2xl text-[#343d46]">
@@ -230,6 +236,13 @@ return(
                 </div>
             </div>
         </div>
+
+        <div class="grid col-span-3 text-center mb-10 lg:mb-14" id='services'>
+                <h4 class="text-lg font-bold md:text-4xl md:leading-tight">Training</h4>
+                <LayoutGridDemo />
+        </div>
+        
+            
     </div>
 </div>
 )}
