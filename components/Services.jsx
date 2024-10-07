@@ -237,7 +237,7 @@ return(
             </div>
         </div>
 
-        <div class="grid col-span-3 text-center mb-10 lg:mb-14" id='services'>
+        <div class="grid col-span-3 text-center mb-5 lg:mb-10" id='services'>
                 <h4 class="text-lg font-bold md:text-4xl md:leading-tight">Training</h4>
                 <LayoutGridDemo />
         </div>
