@@ -8,7 +8,7 @@ const Chinsisi_Image = () => {
         alt="logo"
         width={80}
         height={80}
-        className="rounded-lg"
+        className="rounded-lg size-20"
         >
 
         </Image>
