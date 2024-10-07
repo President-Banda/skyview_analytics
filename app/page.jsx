@@ -9,7 +9,7 @@ import CoreValues from "@/components/CoreValues";
 
 export default function Home() {
   return (
-    <div className="font-[Wix-Madefor-Display] font-bold">
+    <div className="font-[Dosis] font-bold">
       <Navbar />
       <Header />
       <Testimonial />

@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
   
 
-#team1 {
-    height:inherit !important;
-    object-fit: cover;
-        /* Scale the image to cover the container */
-    object-position: center;
+@layer base {
+    html {
+        /* @apply bg-gray-600 text-white; */
+        font-family: 'Wix-Madefor-Display','Dosis', 'Roboto';
+    }
 }
