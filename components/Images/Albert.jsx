@@ -1,11 +1,10 @@
 import Image from 'next/image'
-import React from 'react'
 
 const Albert_Image = () => {
   return (
-    <div>
+    
         <Image
-        src="/images/albert.png" 
+        src="/images/albert_e.png" 
         alt="logo"
         width={240}
         height={240}
@@ -13,7 +12,7 @@ const Albert_Image = () => {
         >
 
         </Image>
-    </div>
+    
   )
 }
 

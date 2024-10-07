@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
   
+
+#team1 {
+    height:inherit !important;
+    object-fit: cover;
+        /* Scale the image to cover the container */
+    object-position: center;
+}
