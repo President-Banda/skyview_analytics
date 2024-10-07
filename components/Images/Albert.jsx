@@ -6,8 +6,8 @@ const Albert_Image = () => {
         <Image
         src="/images/albert_e.png" 
         alt="logo"
-        width={240}
-        height={240}
+        width={80}
+        height={80}
         className="rounded-lg"
         >
 

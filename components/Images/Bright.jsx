@@ -1,10 +1,10 @@
 import Image from 'next/image'
 
-const Richard_Image = () => {
+const Bright_Image = () => {
   return (
-    <div>
+    
         <Image
-        src="/images/richard.png" 
+        src="/images/bright.jpg" 
         alt="logo"
         width={80}
         height={80}
@@ -12,8 +12,8 @@ const Richard_Image = () => {
         >
 
         </Image>
-    </div>
+    
   )
 }
 
-export default Richard_Image
+export default Bright_Image
