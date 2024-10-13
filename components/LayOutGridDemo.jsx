@@ -75,14 +75,14 @@ const cards = [
     content: <SkeletonOne />,
     className: "md:col-span-2",
     thumbnail:
-      "images/training_one.jpg",
+      "images/training_one.JPG",
   },
   {
     id: 2,
     content: <SkeletonTwo />,
     className: "col-span-1",
     thumbnail:
-      "images/training_four.jpg",
+      "images/training_four.JPG",
   },
   {
     id: 3,
@@ -96,6 +96,6 @@ const cards = [
     content: <SkeletonFour />,
     className: "md:col-span-2",
     thumbnail:
-      "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "images/training_three.jpg",
   },
 ];
