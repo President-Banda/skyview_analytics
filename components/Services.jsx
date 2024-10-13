@@ -239,6 +239,11 @@ return(
 
         <div class="grid col-span-3 text-center mb-5 lg:mb-10" id='services'>
                 <h4 class="text-lg font-bold md:text-4xl md:leading-tight">Training</h4>
+                <p class="text-xl font-medium text-gray-800 lg:text-2xl lg:leading-normal max-w-6xl">
+                    We offer top-tier cloud and technical training, led by experienced professionals authorized by AWS for AWS Cloud.
+                    With extensive expertise in DevOps technologies—including Docker, Terraform, Linux, WordPress, and programming—we are committed to
+                    delivering high-quality training tailored to your needs. If you're seeking training solutions, look no further; we are here to help!
+                </p>
                 <LayoutGridDemo />
         </div>
         
