@@ -7,85 +7,85 @@ import { LayoutGridDemo } from './LayOutGridDemo'
 
 const Services = () => {
 return(
-   <div class="flex mx-auto justify-center items-center" >
+   <div className="flex mx-auto justify-center items-center" >
     
 
-    <div class="sm:grid sm:grid-cols-1 sm:mb-2 lg:grid-cols-3 gap-6 m-8 mt-10">
+    <div className="sm:grid sm:grid-cols-1 sm:mb-2 lg:grid-cols-3 gap-6 m-8 mt-10">
 
-    <div class="grid col-span-3 text-center mb-10 lg:mb-14" id='services'>
-        <h2 class="text-2xl font-bold md:text-4xl md:leading-tight">Our Services</h2>
+    <div className="grid col-span-3 text-center mb-10 lg:mb-14" id='services'>
+        <h2 className="text-2xl font-bold md:text-4xl md:leading-tight">Our Services</h2>
     </div>
     
-    <div class="grid col-span-3 text-center mb-10 lg:mb-14" id='services'>
-        <h4 class="text-lg font-bold md:text-4xl md:leading-tight">Hosting</h4>
+    <div className="grid col-span-3 text-center mb-10 lg:mb-14" id='services'>
+        <h4 className="text-lg font-bold md:text-4xl md:leading-tight">Hosting</h4>
     </div>
     
-        <div class="flex flex-col  w-full xl:w-96 bg-[#c0c5ce] bg-opacity-10 shadow-2xl text-[#343d46]">
-            <figure class="flex justify-center items-center">
+        <div className="flex flex-col  w-full xl:w-96 bg-[#c0c5ce] bg-opacity-10 shadow-2xl text-[#343d46]">
+            <figure className="flex justify-center items-center">
                 <Shared_Hosting_Image />
             </figure>
-            <div class="flex flex-col p-8 h-full">
-                <div class="text-2xl text-center  pb-6">Basic Hosting</div>
-                <div class=" text-center text-base pb-12">Monthly or Yearly hosting with/out CPanel, WHM, Coolify or your choice of UI</div>
-                <div class="flex flex-col gap-3  text-sm">
+            <div className="flex flex-col p-8 h-full">
+                <div className="text-2xl text-center  pb-6">Basic Hosting</div>
+                <div className=" text-center text-base pb-12">Monthly or Yearly hosting with/out CPanel, WHM, Coolify or your choice of UI</div>
+                <div className="flex flex-col gap-3  text-sm">
 
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
-                        <div class="font-bold">Shared Hosting</div>
+                        <div className="font-bold">Shared Hosting</div>
                     </div>
 
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>Domain Name</div>
                     </div>
 
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>100GB Ultra Fast SSD Storage</div>
                     </div>
 
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>Unlimited Transfer</div>
                     </div>
                     
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>Unlimited Email Accounts</div>
                     </div>
                     
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>Worpress Optimized</div>
                     </div>
                     
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
@@ -94,152 +94,152 @@ return(
 
 
                 </div>
-                <div class="flex flex-grow"></div>
-                <div class="flex pt-10">
-                    <button class="w-full bg-zinc-700 bg-opacity-15 text-[#343d46]  text-xl p-3 rounded-lg hover:bg-[#3f3f46] hover:text-white active:scale-95 transition-transform transform">Get Quote</button>
+                <div className="flex flex-grow"></div>
+                <div className="flex pt-10">
+                    <button className="w-full bg-zinc-700 bg-opacity-15 text-[#343d46]  text-xl p-3 rounded-lg hover:bg-[#3f3f46] hover:text-white active:scale-95 transition-transform transform">Get Quote</button>
                 </div>
             </div>
         </div>
 
-        <div class="flex flex-col  w-full xl:w-96 bg-[#c0c5ce] bg-opacity-10 shadow-2xl text-[#343d46]">
-            <figure class="flex justify-center items-center">
+        <div className="flex flex-col  w-full xl:w-96 bg-[#c0c5ce] bg-opacity-10 shadow-2xl text-[#343d46]">
+            <figure className="flex justify-center items-center">
                 <Vps_Hosting_Image />
             </figure>
-            <div class="flex flex-col p-8 h-full">
-                <div class="text-2xl text-center  pb-6">VPS Hosting</div>
-                <div class=" text-center text-base pb-12">Looking for something a bit more customized and private? we got you...</div>
-                <div class="flex flex-col gap-3  text-sm">
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+            <div className="flex flex-col p-8 h-full">
+                <div className="text-2xl text-center  pb-6">VPS Hosting</div>
+                <div className=" text-center text-base pb-12">Looking for something a bit more customized and private? we got you...</div>
+                <div className="flex flex-col gap-3  text-sm">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
-                        <div class="font-bold">All features of the basic plan</div>
+                        <div className="font-bold">All features of the basic plan</div>
                     </div>
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>Increased Storage</div>
                     </div>
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>Advanced Analytics</div>
                     </div>
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>Reporting Tools</div>
                     </div>
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>Third-Party Integrations</div>
                     </div>
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>E-Mail Support</div>
                     </div>
                 </div>
-                <div class="flex flex-grow"></div>
-                <div class="flex pt-10">
-                    <button class="w-full bg-zinc-700 bg-opacity-15 text-[#343d46]  text-xl p-3 rounded-lg hover:bg-[#3f3f46] hover:text-white active:scale-95 transition-transform transform">Get Quote</button>
+                <div className="flex flex-grow"></div>
+                <div className="flex pt-10">
+                    <button className="w-full bg-zinc-700 bg-opacity-15 text-[#343d46]  text-xl p-3 rounded-lg hover:bg-[#3f3f46] hover:text-white active:scale-95 transition-transform transform">Get Quote</button>
                 </div>
             </div>
         </div>
 
-        <div class="flex flex-col  w-full xl:w-96 bg-[#c0c5ce] bg-opacity-10 shadow-2xl  text-[#343d46]">
-            <figure class="flex justify-center items-center">
+        <div className="flex flex-col  w-full xl:w-96 bg-[#c0c5ce] bg-opacity-10 shadow-2xl  text-[#343d46]">
+            <figure className="flex justify-center items-center">
                 <Ml_Hosting_Image />
             </figure>
-            <div class="flex flex-col p-8 h-full">
-                <div class="text-2xl text-center  pb-6">Machine Learning Workloads</div>
-                <div class=" text-center text-base pb-12">Exclusive features and priority support for businesses working on ML, AI and DL</div>
-                <div class="flex flex-col gap-3  text-sm">
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+            <div className="flex flex-col p-8 h-full">
+                <div className="text-2xl text-center  pb-6">Machine Learning Workloads</div>
+                <div className=" text-center text-base pb-12">Exclusive features and priority support for businesses working on ML, AI and DL</div>
+                <div className="flex flex-col gap-3  text-sm">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
-                        <div class="font-bold">All features of the Pro plan</div>
+                        <div className="font-bold">All features of the Pro plan</div>
                     </div>
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>Unlimited Storage</div>
                     </div>
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>End-to-End Encryption</div>
                     </div>
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>Predictive Insights</div>
                     </div>
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>Early-Access</div>
                     </div>
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>Dedicated Account Manager</div>
                     </div>
-                    <div class="flex flex-row gap-3">
-                        <div class="text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                    <div className="flex flex-row gap-3">
+                        <div className="text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check">
                                 <path d="M20 6 9 17l-5-5"></path>
                             </svg>
                         </div>
                         <div>24/7 Dedicated Customer Support</div>
                     </div>
                 </div>
-                <div class="flex flex-grow"></div>
-                <div class="flex pt-10">
-                    <button class="w-full bg-zinc-700 bg-opacity-15 text-[#343d46]  text-xl p-3 rounded-lg hover:bg-[#3f3f46] hover:text-white active:scale-95 transition-transform transform">Get Quote</button>
+                <div className="flex flex-grow"></div>
+                <div className="flex pt-10">
+                    <button className="w-full bg-zinc-700 bg-opacity-15 text-[#343d46]  text-xl p-3 rounded-lg hover:bg-[#3f3f46] hover:text-white active:scale-95 transition-transform transform">Get Quote</button>
                 </div>
             </div>
         </div>
 
-        <div class="grid col-span-3 text-center mb-5 lg:mb-10" id='services'>
-                <h4 class="text-lg font-bold md:text-4xl md:leading-tight">Training</h4>
-                <p class="text-xl font-medium text-gray-800 lg:text-2xl lg:leading-normal max-w-6xl">
+        <div className="grid col-span-3 text-center mb-5 lg:mb-10" id='services'>
+                <h4 className="text-lg font-bold md:text-4xl md:leading-tight">Training</h4>
+                <p className="text-xl font-medium text-gray-800 lg:text-2xl lg:leading-normal max-w-6xl">
                     We offer top-tier cloud and technical training, led by experienced professionals authorized by AWS for AWS Cloud.
                     With extensive expertise in DevOps technologies—including Docker, Terraform, Linux, WordPress, and programming—we are committed to
                     delivering high-quality training tailored to your needs. If you're seeking training solutions, look no further; we are here to help!

@@ -2,14 +2,15 @@ import Image from "next/image";
 
 import React from 'react'
 
-const Logo = () => {
+const Logo = ({ className }) => {
   return (
-    <div>
+    <div className="relative w-full h-full">
         <Image
-        src="/images/skyview.svg" 
+        src="/images/sva_logo.svg" 
         alt="logo"
-        width={200}
-        height={200}
+        width={500}
+        height={500}
+        className={className + " object-contain"}
         />
     </div>
   )
