@@ -8,7 +8,7 @@ const Navbar = () => {
   <nav className="relative max-w-[80rem] w-full md:flex md:items-center md:justify-between md:gap-3 ps-5 pe-2 mx-2 lg:mx-auto py-2">
     <div className="flex items-center justify-between">
   
-      <a className="flex-none w-48 h-48 focus:outline-none focus:opacity-80"
+      <a className="flex-none w-48 h-40 focus:outline-none focus:opacity-80"
   href="#"
   aria-label="Brand">
         <Logo className="w-full h-full object-contain" />
