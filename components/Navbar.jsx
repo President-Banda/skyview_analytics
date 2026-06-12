@@ -1,72 +1,125 @@
-import React from 'react'
-import { Home } from './_icons/home'
-import Logo from './Images/Logo'
+"use client";
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Logo from './Images/Logo';
+
+const links = [
+  { href: '#',            label: 'Home'        },
+  { href: '#services',    label: 'Services'    },
+  { href: '#credentials', label: 'Credentials' },
+  { href: '#team',        label: 'Team'        },
+  { href: '#contact',     label: 'Contact'     },
+];
 
 const Navbar = () => {
+  const [isOpen,   setIsOpen]   = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-<header className=" my-5 sticky top-2 before:absolute before:inset-0 before:max-w-[85rem] before:mx-2 before:lg:mx-auto before:rounded-[5px] before:border before:border-gray-200 after:absolute after:inset-0 after:-z-[1] after:max-w-[85rem] after:mx-2 after:lg:mx-auto after:rounded-[10px] after:bg-white flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full">
-  <nav className="relative max-w-[80rem] w-full md:flex md:items-center md:justify-between md:gap-3 ps-5 pe-2 mx-2 lg:mx-auto py-2">
-    <div className="flex items-center justify-between">
-  
-      <a className="flex-none w-48 h-40 focus:outline-none focus:opacity-80"
-  href="#"
-  aria-label="Brand">
-        <Logo className="w-full h-full object-contain" />
-      </a>
+    <motion.header
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled ? 'bg-white/90 backdrop-blur-lg shadow-sm border-b border-gray-100' : 'bg-white'
+      }`}
+    >
+      <nav className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
 
-      
-      <div className="md:hidden">
-        <button type="button" className="hs-collapse-toggle relative size-9 flex justify-center items-center text-sm font-semibold rounded-full border border-gray-200 text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" id="hs-header-classic-collapse" aria-expanded="false" aria-controls="hs-header-classic" aria-label="Toggle navigation" data-hs-collapse="#hs-header-classic">
-          <svg className="hs-collapse-open:hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
-          <svg className="hs-collapse-open:block shrink-0 hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-          <span className="sr-only">Toggle navigation</span>
-        </button>
-      </div>
-      
-    </div>
-    
+        {/* Logo — container sized to the 770:561 ≈ 1.37:1 logo ratio */}
+        <a href="#" className="flex-shrink-0 w-36 h-16 relative">
+          <Logo className="w-full h-full" />
+        </a>
 
-    
-    <div id="hs-header-classic" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block" aria-labelledby="hs-header-classic-collapse">
-      <div className="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300">
-        <div className="py-2 md:py-0 flex flex-col md:flex-row md:items-center md:justify-end gap-0.5 md:gap-1">
-          <a className="p-2 flex items-center  text-sm text-blue-600 focus:outline-none focus:text-blue-600 font-extralight" href="#" aria-current="page">
-            <svg className="shrink-0 size-4 me-3 md:me-2 block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-            {/* <Home className="shrink-0 size-4 me-3 md:me-2 block" /> */}
-            Home
-          </a>
-
-
-          <a className="p-2 flex items-center text-sm text-gray-800 hover:text-gray-500 focus:outline-none focus:text-gray-500 font-extralight" href="#services">
-            <svg className="shrink-0 size-4 me-3 md:me-2 block " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 12h.01"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M22 13a18.15 18.15 0 0 1-20 0"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
-            Services
-          </a>
-
-          <a className="p-2 flex items-center text-sm text-gray-800 hover:text-gray-500 focus:outline-none focus:text-gray-500 font-extralight" href="#team">
-            <svg className="shrink-0 size-4 me-3 md:me-2 block " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            Team
-          </a>
-
-          <a className="p-2 flex items-center text-sm text-gray-800 hover:text-gray-500 focus:outline-none focus:text-gray-500 font-extralight" href="#contact">
-            <svg className="shrink-0 size-4 me-3 md:me-2 block " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
-            Contact Us
-          </a>
-          
-
-          <div className="relative flex flex-wrap items-center gap-x-1.5 md:ps-2.5  md:ms-1.5 before:block before:absolute before:top-1/2 before:-start-px before:w-px before:h-4 before:bg-gray-300 before:-translate-y-1/2">
-            <a className="p-2 w-full flex items-center text-sm text-gray-800 hover:text-gray-500 focus:outline-none focus:text-gray-500 font-extralight" href="#">
-              <svg className="shrink-0 size-4 me-3 md:me-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              Log in
-            </a>
-          </div>
-          
+        {/* Desktop links */}
+        <div className="hidden md:flex items-center gap-0.5">
+          {links.map((link, i) => (
+            <motion.a
+              key={link.href}
+              href={link.href}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 + i * 0.07, duration: 0.35 }}
+              className="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+            >
+              {link.label}
+            </motion.a>
+          ))}
         </div>
-      </div>
-    </div>
-    
-  </nav>
-</header>
-  )
-}
 
-export default Navbar
+        {/* CTA */}
+        <motion.div
+          className="hidden md:block"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5, duration: 0.35 }}
+        >
+          <a href="#contact"
+            className="px-5 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 active:scale-95 transition-all">
+            Get Quote
+          </a>
+        </motion.div>
+
+        {/* Mobile toggle */}
+        <button onClick={() => setIsOpen(o => !o)}
+          className="md:hidden p-2 rounded-lg text-slate-600 hover:bg-gray-100 transition-colors"
+          aria-label="Toggle navigation">
+          <AnimatePresence mode="wait" initial={false}>
+            {isOpen ? (
+              <motion.svg key="close" className="size-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" strokeWidth={2}
+                initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </motion.svg>
+            ) : (
+              <motion.svg key="open" className="size-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" strokeWidth={2}
+                initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </motion.svg>
+            )}
+          </AnimatePresence>
+        </button>
+      </nav>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            key="mobile-menu"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
+            className="md:hidden overflow-hidden bg-white border-t border-gray-100 shadow-lg"
+          >
+            <div className="px-4 py-4 space-y-1">
+              {links.map(link => (
+                <a key={link.href} href={link.href} onClick={() => setIsOpen(false)}
+                  className="block px-3 py-2.5 text-sm font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors">
+                  {link.label}
+                </a>
+              ))}
+              <div className="pt-2 border-t border-gray-100 mt-2">
+                <a href="#contact" onClick={() => setIsOpen(false)}
+                  className="block px-4 py-2.5 bg-blue-600 text-white text-sm font-semibold text-center rounded-lg hover:bg-blue-700 transition-colors">
+                  Get Quote
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
+  );
+};
+
+export default Navbar;
