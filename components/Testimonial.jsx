@@ -2,9 +2,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Chimwemwe_Image from './Images/Chimwemwe'
-import Dennis_Image from './Images/Dennis'
-import Zakudimba_Logo from './Images/Zakudimba'
-import CropCare from './Images/CropCare'
+import Dennis_Image    from './Images/Dennis'
+import MosesAvatar     from './Images/Moses'
+import Zakudimba_Logo  from './Images/Zakudimba'
+import CropCare        from './Images/CropCare'
+import WishVibeLogo    from './Images/WishVibe'
 
 const StarIcon = () => (
   <svg className="size-4 text-yellow-400 fill-yellow-400" viewBox="0 0 24 24">
@@ -16,6 +18,36 @@ const cardVariant = {
   hidden: { opacity: 0, y: 36 },
   show:   { opacity: 1, y: 0,  transition: { duration: 0.55, ease: 'easeOut' } },
 };
+
+const testimonials = [
+  {
+    stars: 5,
+    Logo: CropCare,
+    quote: "What I needed was simple — an endpoint with backend code and an underlying database, no management interface, no configuration and no emails. All I did was invite the team to the repo and they set it up for me in a few hours, fully functional.",
+    Avatar: Chimwemwe_Image,
+    name: "Chimwemwe Vinkhumbo",
+    role: "Mobile App Developer · Cropcare Malawi",
+    rating: "4.8",
+  },
+  {
+    stars: 5,
+    Logo: Zakudimba_Logo,
+    quote: "Switched from my previous hosting provider and never faced any issues with speed, availability, nor resources. With assistance from the technical team, I never experienced an outage.",
+    Avatar: Dennis_Image,
+    name: "Dennis Makwakwa",
+    role: "Software Developer · Zakudimba",
+    rating: "4.6",
+  },
+  {
+    stars: 5,
+    Logo: WishVibeLogo,
+    quote: "Honestly, the website SkyView built for us looks even more beautiful than the likes of Meta. The attention to detail, the animations, the speed — everything exceeded what I thought was possible in Malawi. Absolutely world-class service.",
+    Avatar: MosesAvatar,
+    name: "Moses Nyirenda",
+    role: "Founder · WishVibe Platforms",
+    rating: "5.0",
+  },
+];
 
 const Testimonial = () => {
   return (
@@ -38,76 +70,50 @@ const Testimonial = () => {
         </motion.div>
 
         <motion.div
-          className="grid lg:grid-cols-2 gap-6"
+          className="grid md:grid-cols-2 xl:grid-cols-3 gap-6"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: '-60px' }}
           variants={{ hidden: {}, show: { transition: { staggerChildren: 0.15 } } }}
         >
-          <motion.div
-            variants={cardVariant}
-            className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 flex flex-col gap-6 hover:shadow-md transition-shadow"
-          >
-            <div className="flex gap-0.5">
-              {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
-            </div>
-            <div className="flex-shrink-0">
-              <CropCare />
-            </div>
-            <blockquote className="text-slate-700 text-base leading-relaxed flex-1">
-              &ldquo;What I needed was simple — an endpoint with backend code and an underlying database,
-              no management interface, no configuration and no emails. All I did was invite the team
-              to the repo and they set it up for me in a few hours, fully functional.&rdquo;
-            </blockquote>
-            <footer className="flex items-center gap-4 pt-4 border-t border-gray-100">
-              <div className="shrink-0 size-12 rounded-full overflow-hidden">
-                <Chimwemwe_Image />
+          {testimonials.map(({ stars, Logo, quote, Avatar, name, role, rating }) => (
+            <motion.div
+              key={name}
+              variants={cardVariant}
+              className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 flex flex-col gap-6 hover:shadow-md transition-shadow"
+            >
+              <div className="flex gap-0.5">
+                {[...Array(stars)].map((_, i) => <StarIcon key={i} />)}
               </div>
-              <div>
-                <p className="font-bold text-slate-900">Chimwemwe Vinkhumbo</p>
-                <p className="text-sm text-slate-500">Mobile App Developer · Cropcare Malawi</p>
-              </div>
-              <div className="ms-auto text-right">
-                <p className="text-2xl font-extrabold text-slate-900">4.8</p>
-                <p className="text-xs text-slate-400">out of 5</p>
-              </div>
-            </footer>
-          </motion.div>
 
-          <motion.div
-            variants={cardVariant}
-            className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 flex flex-col gap-6 hover:shadow-md transition-shadow"
-          >
-            <div className="flex gap-0.5">
-              {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
-            </div>
-            <div className="flex-shrink-0">
-              <Zakudimba_Logo />
-            </div>
-            <blockquote className="text-slate-700 text-base leading-relaxed flex-1">
-              &ldquo;Switched from my previous hosting provider and never faced any issues with speed,
-              availability, nor resources. With assistance from the technical team, I never
-              experienced an outage.&rdquo;
-            </blockquote>
-            <footer className="flex items-center gap-4 pt-4 border-t border-gray-100">
-              <div className="shrink-0 size-12 rounded-full overflow-hidden">
-                <Dennis_Image />
+              <div className="flex-shrink-0">
+                <Logo />
               </div>
-              <div>
-                <p className="font-bold text-slate-900">Dennis Makwakwa</p>
-                <p className="text-sm text-slate-500">Software Developer · Zakudimba</p>
-              </div>
-              <div className="ms-auto text-right">
-                <p className="text-2xl font-extrabold text-slate-900">4.6</p>
-                <p className="text-xs text-slate-400">out of 5</p>
-              </div>
-            </footer>
-          </motion.div>
 
+              <blockquote className="text-slate-700 text-base leading-relaxed flex-1">
+                &ldquo;{quote}&rdquo;
+              </blockquote>
+
+              <footer className="flex items-center gap-4 pt-4 border-t border-gray-100">
+                <div className="shrink-0 size-12 rounded-full overflow-hidden">
+                  <Avatar />
+                </div>
+                <div>
+                  <p className="font-bold text-slate-900">{name}</p>
+                  <p className="text-sm text-slate-500">{role}</p>
+                </div>
+                <div className="ms-auto text-right">
+                  <p className="text-2xl font-extrabold text-slate-900">{rating}</p>
+                  <p className="text-xs text-slate-400">out of 5</p>
+                </div>
+              </footer>
+            </motion.div>
+          ))}
         </motion.div>
+
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Testimonial
+export default Testimonial;
