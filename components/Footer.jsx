@@ -92,7 +92,7 @@ const Footer = () => {
                     </a>
                   </div>
                   <div>
-                    <a href="mailto:woof-prevail-grub@duck.com"
+                    <a href="mailto:info@skyviewanalytics.dev"
                       className="inline-flex items-center gap-2 group">
                       <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-blue-50 border border-blue-200 text-[10px] font-bold uppercase tracking-wide text-blue-600 group-hover:bg-blue-100 transition-colors">
                         <svg className="size-3" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
@@ -200,8 +200,8 @@ const Footer = () => {
                       {status === 'error' && (
                         <div className="p-3 rounded-lg bg-red-50 border border-red-200 text-sm text-red-700">
                           Something went wrong. Please email us directly at{' '}
-                          <a href="mailto:woof-prevail-grub@duck.com" className="font-semibold underline">
-                            woof-prevail-grub@duck.com
+                          <a href="mailto:info@skyviewanalytics.dev" className="font-semibold underline">
+                            info@skyviewanalytics.dev
                           </a>
                         </div>
                       )}
@@ -291,7 +291,7 @@ const Footer = () => {
                     className="block text-xl font-bold text-slate-900 hover:text-blue-600 transition-colors">
                     +265 887 053 883
                   </a>
-                  <a href="mailto:woof-prevail-grub@duck.com"
+                  <a href="mailto:info@skyviewanalytics.dev"
                     className="inline-flex items-center gap-2 mt-1 group">
                     <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-blue-50 border border-blue-200 text-[10px] font-bold uppercase tracking-wide text-blue-600 group-hover:bg-blue-100 transition-colors">
                       <svg className="size-3" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
