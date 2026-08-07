@@ -206,12 +206,12 @@ const Header = () => {
 
         {/* Trusted-by strip */}
         <motion.div
-          className="mt-16 pt-8 border-t border-gray-100"
+          className="mt-12 pt-6 border-t border-gray-100"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.5 }}
         >
-          <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 text-center mb-5">
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 text-center mb-4">
             Trusted by
           </p>
           <motion.div

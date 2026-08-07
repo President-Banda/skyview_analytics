@@ -5,11 +5,12 @@ import Shared_Hosting_Image from './Images/Shared'
 import Vps_Hosting_Image from './Images/Vps'
 import Ml_Hosting_Image from './Images/Ml'
 import { LayoutGridDemo } from './LayOutGridDemo'
+import HostingPackages from './HostingPackages';
 
 const CheckIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-    fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-    className="shrink-0 text-blue-600">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+    fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+    className="shrink-0 text-slate-400 mt-0.5">
     <path d="M20 6 9 17l-5-5" />
   </svg>
 );
@@ -19,45 +20,148 @@ const hostingPlans = [
     title: "Web Hosting",
     subtitle: "Monthly or yearly plans with cPanel, WHM, Coolify, or your choice of control panel.",
     badge: null,
+    packageLabel: "Package 1",
+    icon: (
+      <svg className="size-8 text-blue-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+      </svg>
+    ),
     features: [
-      { label: "Shared Hosting", bold: true },
-      { label: "Domain Name" },
-      { label: "100 GB Ultra-Fast SSD Storage" },
-      { label: "Unlimited Transfer" },
-      { label: "Unlimited Email Accounts" },
-      { label: "WordPress Optimised" },
-      { label: "cPanel Control Panel" },
+      { label: "Managed shared hosting environments" },
+      { label: "Custom domain configuration & DNS management" },
+      { label: "Enterprise-grade SSD storage solutions" },
+      { label: "Optimized for WordPress & modern CMS platforms" },
+      { label: "Managed daily backups & recovery" },
+      { label: "Technical setup & ongoing maintenance support ⭐" },
     ],
+    useCase: "Ideal for startups, portfolios, and small business websites needing reliable online presence without infrastructure complexity.",
     Image: Shared_Hosting_Image,
   },
   {
     title: "VPS & Cloud Servers",
     subtitle: "Need more power and isolation? Get a fully managed private server tailored to you.",
     badge: "Popular",
+    packageLabel: "Package 2",
+    icon: (
+      <svg className="size-8 text-blue-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z" />
+      </svg>
+    ),
     features: [
-      { label: "All Web Hosting features", bold: true },
-      { label: "Increased Storage & Resources" },
-      { label: "Advanced Analytics Dashboard" },
-      { label: "Automated Reporting Tools" },
-      { label: "Third-Party Integrations" },
-      { label: "Priority Email Support" },
+      { label: "Dedicated virtual server environments" },
+      { label: "Scalable compute & storage resources" },
+      { label: "Custom server configurations & OS selection" },
+      { label: "Load balancing & traffic optimization" },
+      { label: "Continuous uptime monitoring & alerts" },
+      { label: "Expert DevOps support & system administration" },
     ],
+    useCase: "Perfect for growing applications, SaaS products, and businesses requiring dedicated resources with full control and scalability.",
     Image: Vps_Hosting_Image,
   },
   {
     title: "AI / ML Infrastructure",
     subtitle: "Exclusive environment for businesses running Machine Learning, AI, and Deep Learning workloads.",
     badge: "Enterprise",
+    packageLabel: "Package 3",
+    icon: (
+      <svg className="size-8 text-blue-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
+      </svg>
+    ),
     features: [
-      { label: "All VPS features", bold: true },
-      { label: "Unlimited Storage" },
-      { label: "End-to-End Encryption" },
-      { label: "Predictive Insights" },
-      { label: "Early-Access to New Features" },
-      { label: "Dedicated Account Manager" },
-      { label: "24/7 Priority Support" },
+      { label: "GPU-accelerated compute infrastructure" },
+      { label: "High-performance storage for large datasets" },
+      { label: "Pre-configured ML frameworks & libraries" },
+      { label: "Model training & deployment pipelines" },
+      { label: "Secure data handling & compliance support" },
+      { label: "Dedicated ML engineering consultation" },
     ],
+    useCase: "Built for data science teams, AI startups, and enterprises running machine learning models, deep learning, and big data analytics.",
     Image: Ml_Hosting_Image,
+  },
+];
+
+const trainingPackages = [
+  {
+    id: 1,
+    name: "Certification Practice",
+    popular: false,
+    icon: (
+      <svg className="size-8 text-blue-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+      </svg>
+    ),
+    features: [
+      { label: "Practice exam questions" },
+      { label: "Detailed explanations" },
+      { label: "Exam strategies" },
+      { label: "Weak-area identification" },
+      { label: "Continuous coaching" },
+      { label: "Extensive practice sessions" },
+    ],
+    packageLabel: "Package 1",
+    useCase: "Perfect for self-learners who want to test their knowledge and identify gaps before taking the certification exam.",
+  },
+  {
+    id: 2,
+    name: "Certification Preparation",
+    popular: true,
+    icon: (
+      <svg className="size-8 text-blue-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+      </svg>
+    ),
+    features: [
+      { label: "Structured learning roadmap" },
+      { label: "Complete theory lessons" },
+      { label: "Service-by-service coverage" },
+      { label: "Exam blueprint & study plan" },
+      { label: "Architecture discussions" },
+      { label: "Knowledge checks" },
+    ],
+    packageLabel: "Package 2",
+    useCase: "Ideal for professionals seeking comprehensive guided preparation with structured lessons and expert-led instruction.",
+  },
+  {
+    id: 3,
+    name: "Certification Plus Voucher",
+    popular: false,
+    icon: (
+      <svg className="size-8 text-blue-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3v.75m-9-3h9M3.75 7.5h16.5m-16.5 3.75h16.5m-16.5 3.75h16.5m-16.5 3.75h16.5M6.75 21h10.5a2.25 2.25 0 0 0 2.25-2.25V5.25A2.25 2.25 0 0 0 17.25 3H6.75A2.25 2.25 0 0 0 4.5 5.25v13.5A2.25 2.25 0 0 0 6.75 21Z" />
+      </svg>
+    ),
+    features: [
+      { label: "AWS certification exam voucher" },
+      { label: "Exam registration guidance" },
+      { label: "Final readiness assessment" },
+      { label: "Test-day strategies & tips" },
+      { label: "Post-exam career guidance" },
+      { label: "Priority instructor support" },
+    ],
+    packageLabel: "Package 3",
+    useCase: "Best for committed learners ready to schedule their exam and gain official AWS certification with included voucher.",
+  },
+  {
+    id: 4,
+    name: "Premium Certification Experience",
+    popular: false,
+    icon: (
+      <svg className="size-8 text-blue-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0" />
+      </svg>
+    ),
+    features: [
+      { label: "Hands-on labs" },
+      { label: "Demos" },
+      { label: "Practical assignments" },
+      { label: "Architecture walkthroughs" },
+      { label: "End-to-end project guidance" },
+      { label: "Instructor support" },
+      { label: "Revision sessions" },
+    ],
+    packageLabel: "Package 4",
+    useCase: "Designed for professionals seeking hands-on experience, personalized mentorship, and complete end-to-end certification journey.",
   },
 ];
 
@@ -149,12 +253,13 @@ const stagger = {
 
 const Services = () => {
   return (
+    
     <section className="bg-white py-16 lg:py-24" id="services">
       <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
         <motion.div
-          className="max-w-2xl mx-auto text-center mb-14"
+          className="max-w-2xl mx-auto text-center mb-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -171,62 +276,81 @@ const Services = () => {
         </motion.div>
 
         {/* ── Hosting Plans ── */}
-        <motion.h3
-          className="text-center text-xl font-bold text-slate-700 mb-8"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          Cloud Hosting
-        </motion.h3>
         <motion.div
-          className="grid sm:grid-cols-1 lg:grid-cols-3 gap-6 mb-20"
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: '-60px' }}
+          className="text-center mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          {hostingPlans.map((plan) => (
+          <h3 className="text-3xl md:text-5xl font-extrabold text-slate-900">
+            Cloud Hosting &
+          </h3>
+          <h3 className="text-3xl md:text-5xl font-extrabold text-blue-600">
+            Infrastructure Packages
+          </h3>
+        </motion.div>
+
+        {/* Hosting Packages Grid */}
+        <div className="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-3 mb-20 mt-12">
+          {hostingPlans.map((plan, idx) => (
             <motion.div
               key={plan.title}
-              variants={cardVariants}
-              className="flex flex-col rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all bg-white overflow-hidden"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1, duration: 0.5 }}
+              className={`relative rounded-xl bg-white p-6 ${
+                plan.badge === 'Popular'
+                  ? 'border-2 border-blue-600 shadow-lg'
+                  : 'border border-slate-200'
+              }`}
             >
-              <figure className="flex justify-center items-center bg-slate-50 px-6 pt-6">
-                <plan.Image />
-              </figure>
-
-              <div className="flex flex-col flex-1 p-6">
-                <div className="flex items-center justify-between mb-1">
-                  <h4 className="text-xl font-bold text-slate-900">{plan.title}</h4>
-                  {plan.badge && (
-                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">
-                      {plan.badge}
-                    </span>
-                  )}
+              {/* Popular Badge */}
+              {plan.badge === 'Popular' && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                  <span className="inline-block px-4 py-1 rounded-full bg-blue-600 text-white text-xs font-bold uppercase tracking-wide">
+                    Most Popular
+                  </span>
                 </div>
-                <p className="text-sm text-slate-500 mb-5">{plan.subtitle}</p>
+              )}
 
-                <ul className="space-y-2.5 text-sm flex-1">
-                  {plan.features.map((f) => (
-                    <li key={f.label} className="flex items-center gap-2.5">
-                      <CheckIcon />
-                      <span className={f.bold ? 'font-semibold text-slate-800' : 'text-slate-600'}>{f.label}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mt-6">
-                  <a href="#contact"
-                    className="block w-full py-2.5 text-center text-sm font-semibold rounded-lg border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white active:scale-95 transition-all">
-                    Get Quote
-                  </a>
+              {/* Icon */}
+              <div className="flex justify-center mb-4">
+                <div className="size-16 rounded-xl bg-blue-50 flex items-center justify-center">
+                  {plan.icon}
                 </div>
               </div>
+
+              {/* Package Header */}
+              <div className="mb-4 text-center">
+                <h4 className="text-xl font-bold text-slate-900 mb-2">{plan.title}</h4>
+                {plan.packageLabel && (
+                  <span className="inline-block text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">
+                    {plan.packageLabel}
+                  </span>
+                )}
+                {plan.useCase && (
+                  <p className="text-[11px] text-blue-600 leading-relaxed font-medium mt-3">
+                    {plan.useCase}
+                  </p>
+                )}
+              </div>
+
+              {/* Features */}
+              <ul className="space-y-2.5">
+                {plan.features.map((f, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <CheckIcon />
+                    <span className="text-sm text-slate-600 leading-tight">
+                      {f.label}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* ── Professional Services ── */}
         <div className="mb-20">
@@ -270,12 +394,99 @@ const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-center text-xl font-bold text-slate-700 mb-3">Technical Training</h3>
-          <p className="text-center text-slate-600 max-w-3xl mx-auto mb-2">
+          {/* Training Header */}
+          <div className="text-center mb-4">
+            <h3 className="text-3xl md:text-5xl font-extrabold text-slate-900">
+              Technical Training &
+            </h3>
+            <h3 className="text-3xl md:text-5xl font-extrabold text-blue-600">
+              AWS Certification Packages
+            </h3>
+          </div>
+
+          {/* Global Badge */}
+          <motion.div
+            className="flex justify-center mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-bold uppercase tracking-wide text-blue-600">
+              <svg className="size-3" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+              </svg>
+              Global
+            </span>
+          </motion.div>
+
+          <p className="text-center text-slate-600 max-w-3xl mx-auto mb-12 text-xs">
             Industry-aligned cloud and technology training programmes led by AWS-certified professionals.
             Whether you&apos;re starting your cloud journey or advancing your ML/DevOps skills,
             we have a course for you.
           </p>
+
+          {/* Training Packages Grid */}
+          <div className="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-4 mb-12">
+            {trainingPackages.map((pkg, idx) => (
+              <motion.div
+                key={pkg.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1, duration: 0.5 }}
+                className={`relative rounded-xl bg-white p-6 ${
+                  pkg.popular
+                    ? 'border-2 border-blue-600 shadow-lg'
+                    : 'border border-slate-200'
+                }`}
+              >
+                {/* Popular Badge */}
+                {pkg.popular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span className="inline-block px-4 py-1 rounded-full bg-blue-600 text-white text-xs font-bold uppercase tracking-wide">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                {/* Icon */}
+                <div className="flex justify-center mb-4">
+                  <div className="size-16 rounded-xl bg-blue-50 flex items-center justify-center">
+                    {pkg.icon}
+                  </div>
+                </div>
+
+                {/* Package Header */}
+                <div className="mb-4 text-center">
+                  <h4 className="text-xl font-bold text-slate-900 mb-2">{pkg.name}</h4>
+                  {pkg.packageLabel && (
+                    <span className="inline-block text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">
+                      {pkg.packageLabel}
+                    </span>
+                  )}
+                  {pkg.useCase && (
+                    <p className="text-[11px] text-blue-600 leading-relaxed font-medium mt-3">
+                      {pkg.useCase}
+                    </p>
+                  )}
+                </div>
+
+                {/* Features */}
+                <ul className="space-y-2.5">
+                  {pkg.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <CheckIcon />
+                      <span className="text-sm text-slate-600 leading-tight">
+                        {feature.label}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+
           <LayoutGridDemo />
         </motion.div>
 
