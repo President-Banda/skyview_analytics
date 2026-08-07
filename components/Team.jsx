@@ -5,6 +5,7 @@ import Albert_Image from './Images/Albert'
 import Richard_Image from './Images/Richard'
 import Bright_Image from './Images/Bright'
 import Chinsisi_Image from './Images/Chinsisi'
+import Comfort_Image from './Images/Comfort'
 
 const LinkedInIcon = () => (
   <svg className="shrink-0 size-4" fill="currentColor" viewBox="0 0 24 24">
@@ -33,6 +34,15 @@ const members = [
     name: "Richard Malombe",
     role: "Marketing & Branding",
     bio: "Drives SkyView's brand identity, digital marketing campaigns, and client communication strategies.",
+    linkedIn: "#",
+    twitter: "#",
+    credly: null,
+  },
+  {
+    Image: Comfort_Image,
+    name: "Comfort Kanene",
+    role: "Marketing & Branding",
+    bio: "Specializes in brand development, creative strategy, and building meaningful connections with clients.",
     linkedIn: "#",
     twitter: "#",
     credly: null,
@@ -84,7 +94,7 @@ const Team = () => (
       </motion.div>
 
       <motion.div
-        className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: '-60px' }}
